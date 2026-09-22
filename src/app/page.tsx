@@ -113,7 +113,7 @@ export default function Home() {
           <a href="#home" aria-label="Kayani Towing Service home">
             <img
               className="logo"
-              src="/logo.svg"
+              src="/logo-light.svg"
               alt="Kayani Towing Service"
               width="220"
               height="57"
@@ -164,11 +164,9 @@ export default function Home() {
                 <span /> {t("DAMMAM • SAUDI ARABIA")}
               </p>
               <h1>
-                {t("TOWING &", "خدمة")}
-                <br />
-                <span>{t("RECOVERY", "السحب والإنقاذ")}</span>
-                <br />
-                {t("SERVICE", "على الطريق")}
+                {t("A little roadside", "مساعدة على الطريق")}
+                <br />{t("trouble?", "وقت الحاجة؟")}<br />
+                <span>{t("We’re on your side.", "نحن بجانبك.")}</span>
               </h1>
               <p className="hero-description">
                 {t(
@@ -192,35 +190,12 @@ export default function Home() {
               </div>
             </div>
             <div className="hero-visual">
-              <div className="orbit" />
-              <div className="visual-label">
-                KAYANI <span>RECOVERY / 24:7</span>
-              </div>
-              <img
-                className="truck-art"
-                src="/tow-truck.svg"
-                alt={t(
-                  "Kayani flatbed towing truck illustration",
-                  "رسم شاحنة كاياني لنقل المركبات",
-                )}
-                width="900"
-                height="580"
-              />
-              <div className="availability">
-                <span className="live-dot" />
-                <div>
-                  <strong>
-                    {t("Ready when you need us.", "جاهزون عندما تحتاجنا.")}
-                  </strong>
-                  <small>
-                    {t("24/7 Emergency Service", "خدمة طوارئ على مدار الساعة")}
-                  </small>
-                </div>
-                <ArrowUpRight size={22} />
-              </div>
-              <span className="visual-coordinate">
-                26.4207° N &nbsp; 50.0888° E
-              </span>
+              <img className="hero-photo" src="/towing-hero-v2.png"
+                alt={t("Illustration of an orange flatbed truck carrying a car beside a Saudi coastal road", "صورة توضيحية لشاحنة نقل برتقالية تحمل سيارة بجوار طريق ساحلي سعودي")}
+                width="1536" height="1024" fetchPriority="high" />
+              <div className="image-location"><MapPin size={15}/>{t("Dammam, Saudi Arabia")}</div>
+              <div className="availability"><div className="availability-icon"><Clock3 size={27}/></div><div><strong>{t("Day or night. We’re here.", "ليلاً ونهاراً. نحن هنا.")}</strong><small><span className="live-dot"/>{t("24/7 Emergency Service", "خدمة طوارئ على مدار الساعة")}</small></div><ArrowUpRight size={22}/></div>
+              <div className="image-label">{t("TOWING & RECOVERY", "السحب والإنقاذ")}<span>01 — KAYANI</span></div>
             </div>
           </div>
           <a className="explore wrap" href="#services">
@@ -256,8 +231,8 @@ export default function Home() {
           <div className="wrap">
             <div className="section-heading reveal">
               <div>
-                <p className="eyebrow">01 / {t("Our Services")}</p>
-                <h2>{t("Towing & Recovery Services")}</h2>
+                <p className="eyebrow">{t("Towing & Recovery Services")}</p>
+                <h2>{t("Whatever the road brings.", "مهما واجهتك ظروف الطريق.")}<br/><span className="heading-muted">{t("We have you covered.", "نحن هنا لمساعدتك.")}</span></h2>
               </div>
               <p>
                 {t(
@@ -294,20 +269,14 @@ export default function Home() {
         <section id="about" className="section about">
           <div className="wrap about-grid">
             <div className="about-art reveal">
-              <div className="road-lines" />
-              <img src="/icon.svg" alt="" width="150" height="140" />
-              <p>
-                {t("ALWAYS ON", "دائماً")}
-                <br />
-                <span>{t("YOUR SIDE.", "بجانبك.")}</span>
-              </p>
-              <div className="about-caption">
-                <MapPin size={17} />
-                {t("Serving Dammam and nearby areas.")}
-              </div>
+              <div className="about-art-top"><img src="/icon.svg" alt="" width="70" height="66"/><span>{t("ALWAYS READY", "جاهزون دائماً")}</span></div>
+              <strong className="around-clock">24<span>/</span>7</strong>
+              <p>{t("Good days. Tough days.", "في الأيام السهلة والصعبة.")}<br/><span>{t("We’re a call away.", "نحن على بُعد مكالمة.")}</span></p>
+              <div className="about-caption"><MapPin size={18}/>{t("Serving Dammam and nearby areas.")}</div>
+              <svg className="route-art" viewBox="0 0 300 300" aria-hidden="true"><path d="M310 45H190q-70 0-70 70v20q0 50 50 50h35q45 0 45 45t-45 45H90" fill="none" stroke="currentColor" strokeWidth="40"/><path d="M310 45H190q-70 0-70 70v20q0 50 50 50h35q45 0 45 45t-45 45H90" fill="none" stroke="#ff7b33" strokeWidth="2" strokeDasharray="10 10"/></svg>
             </div>
             <div className="reveal">
-              <p className="eyebrow">02 / {t("About Us")}</p>
+              <p className="eyebrow">{t("About Us")}</p>
               <h2>{t("Reliable Help When You Need It")}</h2>
               <p className="about-description">
                 {t(
@@ -337,7 +306,7 @@ export default function Home() {
           <div className="wrap">
             <div className="section-heading reveal">
               <div>
-                <p className="eyebrow">03 / {t("Why Choose Us")}</p>
+                <p className="eyebrow">{t("Why Choose Us")}</p>
                 <h2>{t("Professional & Dependable")}</h2>
               </div>
             </div>
@@ -358,7 +327,7 @@ export default function Home() {
         <section id="contact" className="section contact">
           <div className="wrap contact-grid">
             <div className="reveal">
-              <p className="eyebrow">04 / {t("Contact Us")}</p>
+              <p className="eyebrow">{t("Contact Us")}</p>
               <h2>{t("Need Towing? Call Now")}</h2>
               <p className="contact-intro">
                 {t(
